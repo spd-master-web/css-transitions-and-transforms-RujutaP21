@@ -1,1 +1,50 @@
 /* button */
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: auto;
+}
+
+main{
+  margin: 25%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: black;
+  color: white;
+  border-radius: 3em;
+  padding: 0;
+  box-shadow: none;
+  transition: .2s;
+}
+
+
+img{
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  align-self: center;
+  margin: 1em;
+}
+
+h2{
+  margin: 0;
+  width: 0;
+  opacity: 0;
+}
+
+button:hover h2{
+  margin: 0.7em;
+  margin-left: 0;
+  width: auto;
+  opacity: 1;
+  transition: 200ms ease-in;
+}
+
