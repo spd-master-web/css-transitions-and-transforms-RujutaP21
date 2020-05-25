@@ -22,9 +22,13 @@ button{
   border-radius: 3em;
   padding: 0;
   box-shadow: none;
-  transition: .2s;
+  transition: .2s ease-in-out;
 }
 
+button:hover{
+  margin-left: -1em;
+  margin-right: 1em;
+}
 
 img{
   display: inline-block;

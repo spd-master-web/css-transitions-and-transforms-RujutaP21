@@ -1,1 +1,72 @@
 /* box */
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: auto;
+  max-width: 10em;
+}
+
+main{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 6em;
+}
+
+.box{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: lightgray;
+  width: 2.5em;
+  height: 2.5em;
+  top: 2em;
+}
+
+h1{
+  position: fixed;
+  margin: 0;
+  align-self: center;
+  color: white;
+  z-index: 1;
+}
+
+.secondcolor{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transition-delay: 200ms ease-in;
+  transition-delay: 300ms;
+}
+
+.thirdcolor{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: lightgreen;
+  transition: 300ms ease-in;
+  transition-delay: 200ms;
+}
+
+.box:hover {
+  
+  .secondcolor{
+  display: block;
+  transition: 200ms ease-in-out;
+  transition-delay: 200ms;
+  }
+
+ .thirdcolor{
+  display: block;
+  transition-delay: 300ms ease-in-out;
+  transition-delay: 500ms;
+ }
+}
