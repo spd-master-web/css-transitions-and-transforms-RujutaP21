@@ -21,13 +21,14 @@ button{
   color: white;
   border-radius: 3em;
   padding: 0;
-  box-shadow: none;
-  transition: .2s ease-in-out;
+  border: none;
+  transition: box-shadow 200ms ease-out;
 }
 
 button:hover{
   margin-left: -1em;
   margin-right: 1em;
+  box-shadow: 0 0.5em 0.5em -0.2em rgba(129, 129, 129, 0.774);
 }
 
 img{
@@ -42,6 +43,7 @@ h2{
   margin: 0;
   width: 0;
   opacity: 0;
+  transform: translateY(2em);
 }
 
 button:hover h2{
@@ -50,5 +52,6 @@ button:hover h2{
   width: auto;
   opacity: 1;
   transition: 200ms ease-in;
+  transform: translateY(0);
 }
 

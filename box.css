@@ -14,6 +14,7 @@ main{
 }
 
 .box{
+  overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
@@ -22,6 +23,7 @@ main{
   width: 2.5em;
   height: 2.5em;
   top: 2em;
+  transition: transform 1s ease-in-out;
 }
 
 h1{
@@ -29,44 +31,44 @@ h1{
   margin: 0;
   align-self: center;
   color: white;
-  z-index: 1;
+  z-index: 3;
 }
 
 .secondcolor{
-  display: none;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 1;
   background-color: black;
-  transition-delay: 200ms ease-in;
-  transition-delay: 300ms;
+  transform: translate(2.5em, 2.5em);
+  transition: 300ms ease-in;
+  transition-delay: 500ms;
 }
 
-.thirdcolor{
-  display: none;
+
+.box:hover .secondcolor{
+  transform: translate(0);
+  transition: 200ms ease-in ;
+  transition-delay: 100ms;
+}
+
+.thirdcolor{ 
+  z-index: 2;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: lightgreen;
-  transition: 300ms ease-in;
+  transform: translateX(2.5em);
+  transition: 200ms ease-in;
   transition-delay: 200ms;
 }
 
-.box:hover {
-  
-  .secondcolor{
-  display: block;
+.box:hover .thirdcolor{
+  transform: translateX(0);
   transition: 200ms ease-in-out;
-  transition-delay: 200ms;
-  }
-
- .thirdcolor{
-  display: block;
-  transition-delay: 300ms ease-in-out;
   transition-delay: 500ms;
- }
 }
